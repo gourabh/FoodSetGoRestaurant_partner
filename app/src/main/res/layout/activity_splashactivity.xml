@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginPageBackgroundColor"
+    tools:context=".splashactivity">
+
+
+    <ImageView
+        android:id="@+id/logo_animation"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/fsg_logo"
+        android:layout_margin="150dp"
+        >
+
+    </ImageView>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/logo_animation"
+        android:src="@drawable/fsg_ro_txt_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"></ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/proxima_nova_a_black"
+        android:text="© Developed by Gourabh Choudhary"
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/goodBlack"/>
+
+
+</RelativeLayout>

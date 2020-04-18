@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_logo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_veg"
+            android:layout_margin="5dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/item_logo"
+            android:layout_marginTop="5dp"
+            >
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                android:textColor="@color/goodBlack"
+                android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
+
+            <TextView
+                android:id="@+id/item_type"
+                android:layout_below="@id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Type"/>
+
+            <TextView
+                android:id="@+id/item_rating"
+                android:layout_below="@id/item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="Rating"
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@id/item_rating"
+                android:layout_below="@id/item_type"
+                android:src="@drawable/ic_star"/>
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_below="@id/item_type"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="44dp"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="Price for two"
+                android:textColor="@color/goodBlack"
+                android:textSize="14sp" />
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:textSize="12sp"
+                android:id="@+id/editBtn"
+                android:backgroundTint="@color/goodBlack"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                 />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Remove"
+                android:textSize="12sp"
+                android:id="@+id/removeBtn"
+                android:backgroundTint="@color/goodBlack"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                 />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
