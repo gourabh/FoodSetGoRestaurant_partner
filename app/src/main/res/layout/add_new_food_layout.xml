@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:scrollbars="vertical">
 
+    //Add new Food items to the existing menu
     <androidx.cardview.widget.CardView
 
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         apps:cardElevation="4dp">
 
-
-
+        //Item details
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

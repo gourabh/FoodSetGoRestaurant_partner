@@ -7,12 +7,12 @@
     app:cardElevation="8dp"
     android:layout_margin="10dp"
     >
-
+    //Populates the order received by restaurant in Card View
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
-
+        //Order Details
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

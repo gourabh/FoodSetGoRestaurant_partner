@@ -20,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ebanx.swipebtn.OnStateChangeListener;
+import com.ebanx.swipebtn.SwipeButton;
 import com.example.foodsetgorestaurant.Common.Common;
 import com.example.foodsetgorestaurant.Interface.ItemClickListener;
 import com.example.foodsetgorestaurant.ViewHolder.ItemViewHolder;
@@ -43,6 +45,9 @@ import java.util.Map;
 
 import io.paperdb.Paper;
 
+/**
+ * Fragment representing the home screen for FoodSetGo Restaurant.This contains menu items
+ */
 public class HomeActivity extends AppCompatActivity {
 
     TextView txtFullName;
@@ -74,10 +79,17 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.nav_menu);
 
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+
+                    case R.id.nav_profile:
+                        startActivity(new Intent(getApplicationContext(),Profile.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.nav_menu:
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivity.class));
@@ -143,6 +155,8 @@ public class HomeActivity extends AppCompatActivity {
                 holder.itemPrice.setText("₹" + model.getPrice());
                 holder.itemType.setText(model.getCourse());
                 holder.itemRating.setText(model.getRating());
+                holder.itemDiscount.setText(model.getDiscount());
+                holder.itemAvailable.setText(Common.convertCodeToYes(model.getAvailable()));
                 if (model.getType().equals("nveg"))
                     holder.itemLogo.setImageResource(R.drawable.icon_non_veg);
 
@@ -201,7 +215,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         alertDialog.setView(add_menu_layout);
-        alertDialog.setIcon(R.drawable.ic_shopping_cart_black_24dp);
+        alertDialog.setIcon(R.drawable.ic_update_black_24dp);
 
         alertDialog.setPositiveButton("Update", new DialogInterface.OnClickListener() {
             @Override
@@ -279,7 +293,7 @@ public class HomeActivity extends AppCompatActivity {
         edtkey=add_menu_layout.findViewById(R.id.itemid);
 
         alertDialog.setView(add_menu_layout);
-        alertDialog.setIcon(R.drawable.ic_shopping_cart_black_24dp);
+        alertDialog.setIcon(R.drawable.ic_food);
 
         alertDialog.setPositiveButton("Create", new DialogInterface.OnClickListener() {
                     @Override
@@ -319,12 +333,5 @@ public class HomeActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(data!=null && data.getData()!=null && resultCode==RESULT_OK)
-        {
-            saveUri=data.getData();
-        }
-    }*/
+
 }

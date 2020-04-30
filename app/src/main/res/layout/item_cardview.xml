@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="160dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="3dp"
+    app:cardElevation="8dp"
     app:cardCornerRadius="5dp"
-    android:background="@color/white"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp">
+    app:cardBackgroundColor="#f3f3f3"
+    android:layout_margin="10dp">
 
+    //Card View to populate the menu items one by one
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        //veg or nonveg icon
 
         <ImageView
             android:id="@+id/item_logo"
@@ -62,19 +63,71 @@
                 android:src="@drawable/ic_star"/>
 
             <TextView
+                android:id="@+id/discount_text"
+                android:layout_below="@id/item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="Discount:  "
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+            <TextView
+                android:id="@+id/item_discount"
+                android:layout_toRightOf="@+id/discount_text"
+                android:layout_below="@+id/item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="Disc"
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+            <TextView
+                android:layout_toRightOf="@+id/item_discount"
+                android:layout_below="@+id/item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="%"
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+
+
+            <TextView
+                android:id="@+id/available_text"
+                android:layout_below="@id/item_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="Available: "
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+
+            <TextView
+                android:id="@+id/item_available"
+                android:layout_toRightOf="@+id/available_text"
+                android:layout_below="@+id/item_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:text="avail"
+                android:textSize="14sp"
+                android:textColor="@color/goodBlack"/>
+
+            <TextView
                 android:id="@+id/item_price"
                 android:layout_width="wrap_content"
-                android:layout_height="22dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/item_type"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="22dp"
-                android:layout_marginBottom="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="40dp"
                 android:gravity="bottom"
                 android:paddingBottom="5dp"
+                android:fontFamily="@font/neue_haas_grotesk_medium_65"
                 android:text="Price for two"
                 android:textColor="@color/goodBlack"
-                android:textSize="14sp" />
-
+                android:textSize="18sp" />
 
 
         </RelativeLayout>
@@ -85,6 +138,8 @@
             android:gravity="bottom"
             android:layout_alignParentBottom="true">
 
+            //edit button to edit item details
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -92,7 +147,7 @@
                 android:text="Edit"
                 android:textSize="12sp"
                 android:id="@+id/editBtn"
-                android:backgroundTint="@color/goodBlack"
+                android:backgroundTint="@color/betterGrey"
                 android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -105,7 +160,7 @@
                 android:text="Remove"
                 android:textSize="12sp"
                 android:id="@+id/removeBtn"
-                android:backgroundTint="@color/goodBlack"
+                android:backgroundTint="@color/betterGrey"
                 android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"

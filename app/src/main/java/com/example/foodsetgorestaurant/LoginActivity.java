@@ -92,6 +92,7 @@ public class LoginActivity extends Fragment {
                                 Common.currentUser = restaurant;
                                 Paper.book().write(Common.USER_KEY, phoneEditText.getText().toString());
                                 Paper.book().write(Common.USER_NAME, restaurant.getName());
+                                Toast.makeText(getContext(), "Logged In", Toast.LENGTH_SHORT).show();
                                 startActivity(i);
                                 getActivity().finish();
                             }

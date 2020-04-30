@@ -40,6 +40,9 @@ import java.util.Locale;
 
 import io.paperdb.Paper;
 
+/**
+ * Fragment representing the Order details screen for FoodSetGo Restaurant.
+ */
 public class OrderDetailsActivity extends AppCompatActivity {//extends Fragment
 
     public RecyclerView recyclerView;
@@ -69,6 +72,11 @@ public class OrderDetailsActivity extends AppCompatActivity {//extends Fragment
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+                    case R.id.nav_profile:
+                        startActivity(new Intent(getApplicationContext(),Profile.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.nav_menu:
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivity.class));
@@ -171,7 +179,10 @@ public class OrderDetailsActivity extends AppCompatActivity {//extends Fragment
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-
+                        String key = getRef(position).getKey();
+                        Intent intent = new Intent(OrderDetailsActivity.this, OrderDetailsItemClicked.class);
+                        intent.putExtra("arg", key);
+                        startActivity(intent);
                     }
                 });
             }

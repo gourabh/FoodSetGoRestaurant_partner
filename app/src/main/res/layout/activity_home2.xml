@@ -7,6 +7,8 @@
     android:id="@+id/rootLayout"
     tools:context=".HomeActivity">
 
+    //This page will display all the menu items
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +31,8 @@
 
     </androidx.cardview.widget.CardView>
 
+    //Recycler view to populate menu items
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_menu"
         android:layout_width="match_parent"
@@ -39,6 +43,7 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    //Floating button to add new menu items
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -56,6 +61,8 @@
         android:src="@drawable/ic_add_black_24dp"
         app:elevation="6dp"
         app:fabSize="normal" />
+
+    //Bottom Navigation bar to navigate
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
        android:layout_width="match_parent"

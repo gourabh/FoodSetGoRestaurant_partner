@@ -7,7 +7,7 @@
     app:cardElevation="8dp"
     android:layout_margin="10dp"
     >
-
+    //Layout To Accept/Reject the order received
     <com.jaredrummler.materialspinner.MaterialSpinner
         android:id="@+id/statusSpinner"
         android:layout_width="match_parent"

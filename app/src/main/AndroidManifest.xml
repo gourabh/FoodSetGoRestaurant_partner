@@ -12,6 +12,8 @@
         android:roundIcon="@drawable/fsg_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".OrderDetailsItemClicked"></activity>
+        <activity android:name=".Profile" />
         <activity android:name=".splashactivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +26,7 @@
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainActivity"
-            android:noHistory="true">
-        </activity>
+            android:noHistory="true" />
     </application>
 
 </manifest>

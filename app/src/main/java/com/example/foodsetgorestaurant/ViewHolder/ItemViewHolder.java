@@ -13,7 +13,7 @@ import com.example.foodsetgorestaurant.R;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView itemName, itemPrice, itemType, itemRating, itemCount;
+    public TextView itemName, itemPrice, itemType, itemRating, itemDiscount,itemAvailable, itemCount;
     public ImageView itemLogo;
     public Button editBtn, removeBtn;
 
@@ -27,6 +27,8 @@ public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemType = itemView.findViewById(R.id.item_type);
         itemLogo = itemView.findViewById(R.id.item_logo);
         itemRating = itemView.findViewById(R.id.item_rating);
+        itemAvailable=itemView.findViewById(R.id.item_available);
+        itemDiscount=itemView.findViewById(R.id.item_discount);
         editBtn=itemView.findViewById(R.id.editBtn);
         removeBtn=itemView.findViewById(R.id.removeBtn);
 

@@ -15,13 +15,31 @@ public class Common {
             return "Placed";
         else if (status.equals("1"))
             return "Accepted";
-        /*else if (status.equals("2"))
+        else if (status.equals("2"))
             return "On the way";
         else if (status.equals("3"))
-            return "Delivered";*/
+            return "Delivered";
         else if (status.equals("4"))
             return "Rejected";
         else
             return null;
     }
+
+    public static String convertCodeToAvailable(String available){
+        if(available.equals("0"))
+            return "Offline";
+        else if (available.equals("1"))
+            return "Online";
+        else
+            return null;
+    }
+    public static String convertCodeToYes(String available){
+        if(available.equals("0"))
+            return "No";
+        else if (available.equals("1"))
+            return "Yes";
+        else
+            return null;
+    }
+
 }

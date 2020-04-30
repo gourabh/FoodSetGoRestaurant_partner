@@ -2,7 +2,7 @@ package com.example.foodsetgorestaurant.model;
 
 public class Restaurant {
 
-    private String Name, Password, Email, Address;
+    private String Name, Password, Email, Address,Available;
     private Long Mobile;
     private String Img;
     private String Price;
@@ -13,7 +13,7 @@ public class Restaurant {
 
     }
 
-    public Restaurant(String name, String password, String email, String address, Long mobile, String img, String price, String type, Double rating) {
+    public Restaurant(String name, String password, String email, String address, Long mobile, String img, String price, String type, Double rating,String available) {
         Name = name;
         Password = password;
         Email = email;
@@ -23,6 +23,7 @@ public class Restaurant {
         Price = price;
         Type = type;
         Rating = rating;
+        Available=available;
     }
 
 
@@ -32,6 +33,14 @@ public class Restaurant {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public String getAvailable() {
+        return Available;
+    }
+
+    public void setAvailable(String available) {
+        Available=available;
     }
 
     public String  getImg() {

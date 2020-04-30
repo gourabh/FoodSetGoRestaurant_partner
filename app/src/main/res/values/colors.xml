@@ -10,6 +10,9 @@
     <color name="ripple">#ff746a</color>
     <color name="white">#ffffff</color>
     <color name="goodBlack">#2e2e2e</color>
+    <color name="headings">#3797CF</color>
+    <color name="solidCircle">#AAFFFFFF</color>
+    <color name="circleBorder">#50FFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="goodGreen">#20cf08</color>
     <color name="betterGreen">#169e03</color>

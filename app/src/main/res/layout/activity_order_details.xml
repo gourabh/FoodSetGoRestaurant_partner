@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OrderDetailsActivity">
 
+    //This page will display the orders received by the restaurant
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +28,8 @@
             android:padding="5dp" />
 
     </androidx.cardview.widget.CardView>
+
+    //Recycler view to populate the individual order details
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/orders_recyclerview"

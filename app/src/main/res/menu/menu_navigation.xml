@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <!-- <item
-        android:id="@+id/dashboard"
-        android:title="DashBoard"
-        android:icon="@drawable/ic_shopping_cart_black_24dp"/>
-
+    //Bottom Navigation Menu
     <item
-        android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/ic_restaurant_black_24dp"/>
-
-    <item
-        android:id="@+id/About"
-        android:title="About Us"
-        android:icon="@drawable/ic_exit_to_app_black_24dp"/>-->
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_account"/>
 
     <item
         android:id="@+id/nav_menu"
@@ -23,7 +14,7 @@
 
     <item
         android:id="@+id/nav_orders"
-        android:icon="@drawable/ic_access_time_black_24dp"
+        android:icon="@drawable/ic_food_and_restaurant"
         android:title="Orders" />
 
     <item
