@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsItemClicked">
+
+    //This page will display the itemised order details when the order recycler view is clicked
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_2"
+        android:layout_below="@id/relative_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/bill_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:background="@color/goodGrey"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/item_total_text"
+            android:layout_below="@id/bill_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Total"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_total"
+            android:layout_below="@id/bill_details"
+            android:layout_toRightOf="@id/item_total_text"
+            android:text="₹0.00"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/item_delivery_text"
+            android:layout_below="@id/item_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Fee"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_delivery"
+            android:layout_below="@id/item_total_text"
+            android:layout_toRightOf="@id/item_delivery_text"
+            android:text="₹0.00"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/item_discount_text"
+            android:layout_below="@id/item_delivery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/discount"
+            android:layout_below="@id/item_delivery_text"
+            android:layout_toRightOf="@id/item_discount_text"
+            android:text="₹0.00"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/goodGreen"/>
+
+        <TextView
+            android:id="@+id/item_taxes_text"
+            android:layout_below="@id/item_discount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taxes and Charges"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/taxes"
+            android:layout_below="@id/discount"
+            android:layout_toRightOf="@id/item_taxes_text"
+            android:text="₹0.00"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_below="@id/item_taxes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Pay :"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_below="@+id/taxes"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="₹0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/goodBlack"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/order_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:background="@color/goodGrey"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_details"
+            android:text="Order ID : "
+            android:id="@+id/order_id_text"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_id_text"
+            android:layout_below="@id/order_details"
+            android:text="#Order_ID"
+            android:id="@+id/order_id"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_id_text"
+            android:text="Status : "
+            android:id="@+id/order_status_text"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_status_text"
+            android:layout_below="@id/order_id_text"
+            android:text="Order Placed"
+            android:id="@+id/order_status"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_status_text"
+            android:text="Delivering to "
+            android:id="@+id/order_delivery_text"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_delivery_text"
+            android:layout_below="@id/order_status_text"
+            android:text="Address"
+            android:id="@+id/order_address"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_address"
+            android:text="Delivered by "
+            android:id="@+id/order_delivered_by_text"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_delivered_by_text"
+            android:layout_below="@id/order_address"
+            android:text="Delivery man"
+            android:id="@+id/order_delivered_by"
+            android:maxLines="1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_delivered_by_text"
+
+            android:text="Order placed at "
+            android:id="@+id/order_placed_time_text"
+            android:textSize="15sp"
+            android:textColor="@color/goodBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_placed_time_text"
+            android:layout_below="@id/order_delivered_by"
+
+            android:text="Time"
+            android:id="@+id/order_placed_time"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    //the itemised orders
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_details_clicked_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="283dp"
+        android:layout_below="@+id/relative_layout_2" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Confirm"
+            android:textSize="12sp"
+            android:id="@+id/confirmBtn"
+            android:backgroundTint="@color/goodGreen"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="12sp"
+            android:id="@+id/cancelBtn"
+            android:backgroundTint="@color/loginPageBackgroundColor"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+
+
+    </LinearLayout>-->
+
+</RelativeLayout>
